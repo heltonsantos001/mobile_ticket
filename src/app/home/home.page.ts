@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { CommonModule, AsyncPipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { SenhaService } from '../service/senha.service';
-import {HeaderComponent} from "../header/header.component";
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-home',
@@ -16,4 +16,14 @@ export class HomePage {
   proximaSenha$ = this.senhaService.proximaSenha$;
 
   constructor(private senhaService: SenhaService) {}
+
+  // Opcional: método para gerar uma nova senha de um setor
+  gerarSenha(setor: 'SP' | 'SE' | 'SG') {
+    this.senhaService.gerarSenha(setor);
+  }
+
+  // Opcional: método para chamar a próxima senha
+  chamarProxima() {
+    this.senhaService.chamarProxima();
+  }
 }

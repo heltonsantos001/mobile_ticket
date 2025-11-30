@@ -4,7 +4,6 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content class="ion-padding">
   <h2>Gerar nova senha</h2>
 
@@ -12,12 +11,12 @@
     <ion-button expand="full" color="primary" (click)="gerarSenha('SP')">SP</ion-button>
     <ion-button expand="full" color="secondary" (click)="gerarSenha('SE')">SE</ion-button>
     <ion-button expand="full" color="tertiary" (click)="gerarSenha('SG')">SG</ion-button>
-
   </div>
-
 
   <h3 *ngIf="senhas$ | async as senhas">
     Última senha:
-    {{ senhas.length ? (senhas[senhas.length - 1].setor + senhas[senhas.length - 1].numero.toString().padStart(3,'0')) : 'Nenhuma' }}
+    {{ senhas.length ? senhas[senhas.length - 1].numero : 'Nenhuma' }}
   </h3>
+
+
 </ion-content>

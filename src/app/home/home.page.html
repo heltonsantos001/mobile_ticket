@@ -9,14 +9,14 @@
     <h2>
       Próxima senha:
       <ng-container *ngIf="proximaSenha$ | async as proximaSenha">
-        {{ proximaSenha ? (proximaSenha.setor + proximaSenha.numero.toString().padStart(3,'0')) : 'Nenhuma' }}
+        {{ proximaSenha?.numero || 'Nenhuma' }}
       </ng-container>
     </h2>
 
     <h3>Fila de senhas</h3>
     <div class="ultimas-senhas">
       <div *ngFor="let s of (senhas$ | async) | slice:-5" class="senha-item">
-        {{ s.setor }}{{ s.numero.toString().padStart(3,'0') }}
+        {{ s.numero }}
       </div>
     </div>
   </div>
