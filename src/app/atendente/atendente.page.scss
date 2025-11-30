@@ -1,0 +1,56 @@
+ion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centraliza verticalmente */
+  padding: 2rem;
+  background: #f7f8fa;
+  height: 100%;
+  text-align: center;
+}
+
+/* Próxima senha */
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  background: #ecf0f1;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Lista de senhas */
+ion-list {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+ion-item {
+  background: #ecf0f1;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #34495e;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* Botão chamar próxima */
+ion-button {
+  margin:auto;
+  width: 220px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 12px;
+  --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+ion-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}

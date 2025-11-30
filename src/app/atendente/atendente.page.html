@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <app-header></app-header>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <h2>
+    Próxima senha:
+    <ng-container *ngIf="proximaSenha$ | async as proximaSenha">
+      {{ proximaSenha ? (proximaSenha.setor + proximaSenha.numero.toString().padStart(3,'0')) : 'Nenhuma' }}
+    </ng-container>
+  </h2>
+
+  <ion-button expand="full" color="success" (click)="chamarProxima()">Chamar próxima</ion-button>
+
+  <h3>Fila de senhas:</h3>
+  <ion-list>
+    <ion-item *ngFor="let s of senhas$ | async">
+      {{ s.setor }}{{ s.numero.toString().padStart(3,'0') }}
+    </ion-item>
+  </ion-list>
+</ion-content>

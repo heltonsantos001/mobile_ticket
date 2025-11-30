@@ -1,0 +1,21 @@
+ion-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom:200px;
+}
+
+ion-button[routerLink] {
+  color: #fff;
+  font-weight: 600;
+  --background: transparent;
+  --box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+ion-button[routerLink]:hover {
+  color: #f1c40f;
+  transform: scale(1.05);
+}
